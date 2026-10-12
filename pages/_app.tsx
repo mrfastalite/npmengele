@@ -1,0 +1,13 @@
+import "../components/plasmic/dark_saa_s_landing_page_starter_primary_copy/plasmic.css"; // plasmic-import: oMmME5T3BNAApt838YaxZp/projectcss
+import "@/styles/globals.css";
+import { PlasmicRootProvider } from "@plasmicapp/react-web";
+import type { AppProps } from "next/app";
+import Head from "next/head";
+import Link from "next/link";
+export default function MyApp({ Component, pageProps }: AppProps) {
+  return (
+    <PlasmicRootProvider Head={Head} Link={Link}>
+      <Component {...pageProps} />
+    </PlasmicRootProvider>
+  );
+}
